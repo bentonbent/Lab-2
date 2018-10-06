@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tic-tac-toe</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+    <link rel="stylesheet" href="tic.css">
+    <script src="tac.js"></script>
+    <script src="angular.min.js"></script>
+
+</head>
+<body>
+
+<div ng-app="toe" ng-controller="toeC">
+
+    <div ng-switch="nextMove"><!-- //player alert -->
+        <div ng-switch-when="blue">
+            <h1 class="one">Player 1</h1>
+        </div>
+        <div ng-switch-when="green">
+            <h1 class="two">Player 2</h1>
+        </div>
+        <div ng-switch-when="GAME OVER!">
+            <h1>GAME OVER!</h1>
+        </div>
+    </div>
+
+<table class="myGrid" ><!--//build tic tac toe grid  -->
+    <tr >
+        <td  class=""  ng-click="change(11)"  id="11"></td>
+        <td  class=""  ng-click="change(12)"  id="12"></td>
+        <td  class=""  ng-click="change(13)"  id="13"></td>
+    </tr>
+    <tr >
+        <td   class="" ng-click="change(21)"  id="21"></td>
+        <td   class="" ng-click="change(22)"  id="22"></td>
+        <td   class="" ng-click="change(23)"  id="23"></td>
+    </tr>
+    <tr >
+        <td   class="" ng-click="change(31)"  id="31"></td>
+        <td   class="" ng-click="change(32)"  id="32"></td>
+        <td   class="" ng-click="change(33)"  id="33"></td>
+    </tr>
+</table>
+
+
+    <button ng-click="reset()">reset board</button>
+
+</div>
+</div>
+
+
+<div class="myAPI" style="float:right">
+<div id="buttons">
+    <label>
+        <input id="query" placeholder='Search' type="text" ng-model="youText"/>
+        <button id="search-button" type="submit" ng-click="youSearch()">Search</button>
+    </label>
+</div>
+
+<div id="search-container">
+    <div ng-repeat="video in youTubeVideos">
+
+    </div>
+    </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+td{
+    border:2px solid black;
+    height:40px;
+    width:40px;
+    cursor:pointer; /**/
+}
+
+.blue{
+    background-color:blue;
+}
+
+.green{
+    background-color:green;
+}
+
+h1.one{
+    color:blue;
+}
+
+h1.two{
+    color:green;
+}
